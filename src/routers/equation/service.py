@@ -20,7 +20,7 @@ async def service_solution(a: Fraction, b: Fraction, c: Fraction) -> SchemeEquat
     d = b ** 2 - 4 * a * c
     if d < 0:
         status = "error"
-        msg = "Уравение не имеет действительных решений"
+        msg = "Уравнение не имеет действительных решений"
     elif d > 0:
         x1 = (-b + math.sqrt(d)) / (2 * a)
         x2 = (-b - math.sqrt(d)) / (2 * a)
@@ -29,5 +29,5 @@ async def service_solution(a: Fraction, b: Fraction, c: Fraction) -> SchemeEquat
     else:
         x1 = -b / (2 * a)
         status = "ok"
-        msg = f"Уравение имеет 1 решение"
+        msg = f"Уравнение имеет 1 решение"
     return SchemeEquationAnswer(status=status, msg=msg, answer=SchemeAnswer(x1=x1, x2=x2))

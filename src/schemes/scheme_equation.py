@@ -16,4 +16,3 @@ class SchemeEquationAnswer(pydantic.BaseModel):
     status: str
     msg: str
     answer: SchemeAnswer
-
